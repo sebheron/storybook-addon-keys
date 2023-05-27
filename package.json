@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "Display keyboard presses in Storybook",
   "keywords": [
-    "storybook-addons", "visualize", "keys", "storybook-addons"
+    "storybook",
+    "storybook-addons",
+    "visualize",
+    "keys",
+    "keyboard"
   ],
   "repository": {
     "type": "git",
@@ -44,7 +48,7 @@
     "build": "tsup",
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p build:watch 'storybook --quiet'",
+    "start": "concurrently \"yarn build:watch\" \"yarn storybook --quiet\"",
     "prerelease": "zx scripts/prepublish-checks.mjs",
     "release": "yarn build && auto shipit",
     "eject-ts": "zx scripts/eject-typescript.mjs",
@@ -63,6 +67,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "auto": "^10.3.0",
     "boxen": "^5.0.1",
+    "concurrently": "^8.0.1",
     "dedent": "^0.7.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.1",
@@ -102,7 +107,15 @@
   "storybook": {
     "displayName": "Addon Keys",
     "supportedFrameworks": [
-      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }
