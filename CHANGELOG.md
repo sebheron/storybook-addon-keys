@@ -1,3 +1,15 @@
+# v1.0.4 (Sun May 28 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@sebheron](https://github.com/sebheron))
+
+#### Authors: 1
+
+- Seb ([@sebheron](https://github.com/sebheron))
+
+---
+
 # v1.0.3 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
