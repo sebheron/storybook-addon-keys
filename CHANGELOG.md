@@ -1,3 +1,15 @@
+# v1.1.2 (Sun May 28 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Fix display bugs and add duration param ([@sebheron](https://github.com/sebheron))
+
+#### Authors: 1
+
+- Seb ([@sebheron](https://github.com/sebheron))
+
+---
+
 # v1.0.5 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
