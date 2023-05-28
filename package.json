@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-keys",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Display keyboard presses in Storybook",
   "keywords": [
     "storybook",
