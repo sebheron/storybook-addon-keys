@@ -1,12 +1,13 @@
 .sb-keyboard-key {
     width: max-content;
     
-    border-right: 3px solid #d5d5d5;
-    border-bottom: 3px solid #d5d5d5;
+    border-right: 3px solid var(--sb-keyboard-key-border, #bfbfbf);
+    border-bottom: 3px solid var(--sb-keyboard-key-border, #bfbfbf);
     border-radius: 4px;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e3e3e3;
+    color: var(--sb-keyboard-key-color, #000000);
+    background-color: var(--sb-keyboard-key-background, #f5f5f5);
     opacity: 0.8;
 
     display: flex;
@@ -17,4 +18,15 @@
 
     pointer-events: none;
     user-select: none;
+
+    animation: sb-keyboard-key-fade-out 0.2s ease-out 0.8s forwards;
+}
+
+@keyframes sb-keyboard-key-fade-out {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
 }

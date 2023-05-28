@@ -1,5 +1,5 @@
 .sbtest-keyboard-inputbox {
-    padding: 5px 0;
+    padding: 5px 3px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,8 @@
     border-radius: 5px;
     width: 100%;
     border: none;
-    background-color: #dbdbdb;
+    background-color: #ececec;
+    box-shadow: 1px 1px 2px #00000032;
 }
 
 .sbtest-keyboard-inputbox:hover {
@@ -20,6 +21,6 @@
 }
 
 .sbtest-keyboard-inputbox:focus {
-    background-color: #e6e6e6;
+    background-color: #dfdfdf;
     outline: none;
 }
