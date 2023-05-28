@@ -2,7 +2,7 @@
 
 # Storybook Addon Keys
 Display keyboard presses in Storybook.
-![Demo](https://github.com/sebheron/storybook-addon-keys/assets/6990718/9f1bc55c-9573-4ae9-9f61-2f65ea3e754d)
+![Demo](https://github.com/sebheron/storybook-addon-keys/assets/6990718/04112b10-3b7a-4346-8fe8-1708832983e4)
 
 ### Installation
 ```bash
