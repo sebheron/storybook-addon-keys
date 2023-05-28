@@ -1,3 +1,16 @@
+# v1.0.5 (Sun May 28 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Change sizing to be increase signifcance in change ([@sebheron](https://github.com/sebheron))
+- Supply some basic configuration to give a bit more flexability in appearance ([@sebheron](https://github.com/sebheron))
+
+#### Authors: 1
+
+- Seb ([@sebheron](https://github.com/sebheron))
+
+---
+
 # v1.0.4 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
