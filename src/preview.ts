@@ -9,7 +9,7 @@
  * https://storybook.js.org/docs/react/writing-stories/decorators
  */
 import type { Renderer, ProjectAnnotations } from "@storybook/types";
-import { PARAM_KEY } from "./constants";
+import { GLOBAL_KEY } from "./constants";
 import { withKeys } from "./withKeys";
 
 /**
@@ -20,7 +20,7 @@ import { withKeys } from "./withKeys";
 const preview: ProjectAnnotations<Renderer> = {
   decorators: [withKeys],
   globals: {
-    [PARAM_KEY]: false,
+    [GLOBAL_KEY]: false,
   },
 };
 

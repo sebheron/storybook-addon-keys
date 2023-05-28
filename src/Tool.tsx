@@ -1,17 +1,17 @@
 import React, { memo, useCallback, useEffect } from "react";
 import { useGlobals, useStorybookApi } from "@storybook/manager-api";
 import { IconButton } from "@storybook/components";
-import { ADDON_ID, PARAM_KEY, TOOL_ID } from "./constants";
+import { ADDON_ID, GLOBAL_KEY, TOOL_ID } from "./constants";
 
 export const Tool = memo(function MyAddonSelector() {
   const [globals, updateGlobals] = useGlobals();
   const api = useStorybookApi();
 
-  const isActive = [true, "true"].includes(globals[PARAM_KEY]);
+  const isActive = [true, "true"].includes(globals[GLOBAL_KEY]);
 
   const toggleMyTool = useCallback(() => {
     updateGlobals({
-      [PARAM_KEY]: !isActive,
+      [GLOBAL_KEY]: !isActive,
     });
   }, [isActive]);
 
