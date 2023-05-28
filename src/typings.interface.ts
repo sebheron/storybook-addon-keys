@@ -7,4 +7,5 @@ export interface KeysConfig {
     position: false | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
     size: false | 'small' | 'medium' | 'large';
     keyMap: false | KeyMap;
+    duration: false | number;
 }

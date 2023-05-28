@@ -2,9 +2,8 @@ import React from 'react';
 import type { Renderer, StoryContext } from "@storybook/types";
 import { useEffect, useGlobals, useParameter, useState } from "@storybook/preview-api";
 
-import KeysCSS from './KeysCSS';
+import { KeysCSS, KeyCSS, KeyAnimation } from "./styles";
 import { GLOBAL_KEY, PARAMS_KEY, DEFAULT_PARAMS } from "./constants";
-import { Key } from "./components/Key";
 import { KeysConfig } from './typings.interface';
 
 type IKey = {
@@ -45,12 +44,11 @@ export const withKeys = (
     <>
       {keysAddon && !isInDocs && (
         <div style={KeysCSS(params.position)}>
+            <style>{KeyAnimation()}</style>
             {keys.map((key) => (
-                <Key key={key.time}
-                     value={key.value}
-                     size={params.size}
-                     keyMap={params.keyMap}
-                     theme={params.theme ?? theme} />
+                <div key={key.time} style={KeyCSS(params.size, params.theme ?? theme, params.duration)}>
+                     {(params.keyMap && params.keyMap[key.value]) || key.value}
+                </div>
             ))}
         </div>
       )}

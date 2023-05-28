@@ -26,7 +26,8 @@ Different parameters are available for use in configuring the way keys appear.
 | `theme`     | The visual theme used when displaying the keys | `light`, `dark`, `false` (uses Storybook theme) | `false`  |
 | `position` | Where to display the keys | `top-right`, `top-left`, `bottom-right`, `bottom-left`| `top-right` |
 | `size` | The size of the keys | `small`, `medium`, `large` | `medium` |
-| `keyMap` | The mapping of the keys to their displayed value | [Configuring key map](#configuring-key-map) | [Default key map](#default-key-map)
+| `duration` | The length of time in milliseconds to display the keys for | `number` | `800` |
+| `keyMap` | The mapping of the keys to their displayed value | [Configuring key map](#configuring-key-map) | [Default key map](#default-key-map) |
 
 #### Modifying Parameters
 You can modify the parameters using the 'keys' property.
@@ -40,6 +41,7 @@ const preview: Preview = {
             theme: 'dark',
             position: 'bottom-right',
             size: 'large',
+            duration: 1000,
             keyMap: false,
         },
     }

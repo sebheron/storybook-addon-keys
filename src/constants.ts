@@ -25,4 +25,5 @@ export const DEFAULT_PARAMS: KeysConfig = {
     position: 'top-right',
     size: 'medium',
     keyMap: DEFAULT_KEY_MAP,
+    duration: 800,
 }
