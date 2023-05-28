@@ -32,6 +32,8 @@ Different parameters are available for use in configuring the way keys appear.
 You can modify the parameters using the 'keys' property.
 ```javascript
 // .storybook/preview.(js|ts)
+import { KeysConfig } from 'storybook-addon-keys';
+
 const preview: Preview = {
     parameters: {
         keys: <KeysConfig>{
@@ -44,7 +46,7 @@ const preview: Preview = {
 }
 ```
 
-See (Storybook Parameters)[https://storybook.js.org/docs/react/writing-stories/parameters] for a more detailed explanation on how to use parameters.
+See [Storybook Parameters](https://storybook.js.org/docs/react/writing-stories/parameters) for a more detailed explanation on how to use parameters.
 
 #### Configuring Key Map
 Keys are mapped from [KeyboardEvent.Key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) to their display value. It can be useful to configure this setting if your app has hot keys you want to label.
