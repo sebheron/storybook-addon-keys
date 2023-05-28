@@ -1,31 +1,12 @@
 import { CSSProperties } from 'react';
 
-const fadeOut = {
-    '0%': {
-        opacity: 0.8,
-    },
-    '100%': {
-        opacity: 0,
-    },
-};
-
-const getDuration = (duration: number | false): string => {
-    return (duration && parseInt(duration.toString()) ? duration : 800)
-    .toLocaleString("en-US", { useGrouping: false });
-};
-
-export const KeyAnimation = (): string => {
-    const keyframes = `@keyframes sb-keys-keyboard-fade-out { ${Object.entries(fadeOut).map(([key, value]) => `${key} { ${Object.entries(value).map(([key, value]) => `${key}: ${value};`).join(' ')} }`).join(' ')} }`;
-    return keyframes;
-};
-
 export const KeyCSS = (
     size: string | false,
-    theme: string | false,
-    duration: number | false
+    theme: string | false
 ): CSSProperties => {
     return {
         width: 'max-content',
+        margin: '8px',
         fontSize: size === 'small' ? '1em' : size === 'large' ? '1.4em' : '1.2em',
         fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
         color: theme && theme === 'dark' ? '#ffffff' : '#000000',
@@ -41,29 +22,35 @@ export const KeyCSS = (
         boxSizing: 'border-box',
         pointerEvents: 'none',
         userSelect: 'none',
-        animation: `sb-keys-keyboard-fade-out 200ms ease-out ${getDuration(duration)}ms forwards`,
     }
 };
 
 export const KeysCSS = (
-    position: string | false
+    position: string | false,
+    opacity: number
 ): CSSProperties => {
     return {
         position: 'absolute',
         flexDirection: 'row',
         flexWrap: 'wrap',
         width: 'max-content',
-        padding: '8px',
         display: 'flex',
         alignItems: 'center',
         gap: '5px',
         pointerEvents: 'none',
+        zIndex: 9999,
+        backgroundColor: '#00000040',
+        opacity,
+        transition: 'opacity 100ms ease-in-out',
         // If position isn't recognised, we'll default to top-right.
-        top:position && !position.includes('bottom') ? '0' : 'unset',
-        bottom:position && position.includes('bottom') ? '0' : 'unset',
-        right:position && !position.includes('left') ? '0' : 'unset',
+        borderRadius: position && position === 'top-left' ? '0 0 4px 0' :
+                      position && position === 'bottom-left' ? '0 4px 0 0' :
+                      position && position === 'bottom-right' ? '4px 0 0 0' :
+                      '0 0 0 4px',
+        top: position && !position.includes('bottom') ? '0' : 'unset',
+        bottom: position && position.includes('bottom') ? '0' : 'unset',
+        right: position && !position.includes('left') ? '0' : 'unset',
         left: position && position.includes('left') ? '0' : 'unset',
         justifyContent: position && position.includes('left') ? 'flex-start' : 'flex-end',
-        zIndex: 9999,
     }
 };
