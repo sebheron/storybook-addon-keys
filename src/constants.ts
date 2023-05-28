@@ -1,4 +1,4 @@
-import { KeyMap, KeysConfig } from "./typings.interface";
+import { KeyMap, KeysConfig } from "./interfaces";
 
 export const ADDON_ID = "storybook/keys";
 export const TOOL_ID = `${ADDON_ID}/tool`;

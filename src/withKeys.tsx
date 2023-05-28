@@ -4,7 +4,7 @@ import { useEffect, useGlobals, useParameter, useState } from "@storybook/previe
 
 import { KeysCSS, KeyCSS, KeyAnimation } from "./styles";
 import { GLOBAL_KEY, PARAMS_KEY, DEFAULT_PARAMS } from "./constants";
-import { KeysConfig } from './typings.interface';
+import { KeysConfig } from './interfaces';
 
 type IKey = {
   value: string;

@@ -1,2 +1,3 @@
-// make it work with --isolatedModules
+export * from './interfaces';
+
 export default {};

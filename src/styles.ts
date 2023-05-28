@@ -9,6 +9,11 @@ const fadeOut = {
     },
 };
 
+const getDuration = (duration: number | false): string => {
+    return (duration && parseInt(duration.toString()) ? duration : 800)
+    .toLocaleString("en-US", { useGrouping: false });
+};
+
 export const KeyAnimation = (): string => {
     const keyframes = `@keyframes sb-keys-keyboard-fade-out { ${Object.entries(fadeOut).map(([key, value]) => `${key} { ${Object.entries(value).map(([key, value]) => `${key}: ${value};`).join(' ')} }`).join(' ')} }`;
     return keyframes;
@@ -36,7 +41,7 @@ export const KeyCSS = (
         boxSizing: 'border-box',
         pointerEvents: 'none',
         userSelect: 'none',
-        animation: `sb-keys-keyboard-fade-out 200ms ease-out ${duration && parseInt(duration.toString()) ? duration : 800}ms forwards`,
+        animation: `sb-keys-keyboard-fade-out 200ms ease-out ${getDuration(duration)}ms forwards`,
     }
 };
 
