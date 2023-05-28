@@ -64,5 +64,6 @@ export const KeysCSS = (
         right:position && !position.includes('left') ? '0' : 'unset',
         left: position && position.includes('left') ? '0' : 'unset',
         justifyContent: position && position.includes('left') ? 'flex-start' : 'flex-end',
+        zIndex: 9999,
     }
 };
