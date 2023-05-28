@@ -1,3 +1,17 @@
+# v1.1.3 (Sun May 28 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Add zIndex ([@sebheron](https://github.com/sebheron))
+- Merge branch 'main' of https://github.com/sebheron/storybook-addon-keys ([@sebheron](https://github.com/sebheron))
+- Fix duration and export typings ([@sebheron](https://github.com/sebheron))
+
+#### Authors: 1
+
+- Seb ([@sebheron](https://github.com/sebheron))
+
+---
+
 # v1.1.2 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
