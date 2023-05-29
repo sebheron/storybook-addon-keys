@@ -23,7 +23,7 @@ Different parameters are available for use in configuring the way keys appear.
 
 | Parameter | Description | Options | Default |
 | --------- | ----------- | ------- | ------- |
-| `theme`     | The visual theme used when displaying the keys | `light`, `dark`, `false` (uses Storybook theme) | `false`  |
+| `theme`     | The visual theme used when displaying the keys | `light`, `dark`, `false` (uses Storybook theme if supplied) | `false`  |
 | `position` | Where to display the keys | `top-right`, `top-left`, `bottom-right`, `bottom-left`| `top-right` |
 | `size` | The size of the keys | `small`, `medium`, `large` | `medium` |
 | `duration` | The length of time in milliseconds to display the keys for | `number` | `800` |
