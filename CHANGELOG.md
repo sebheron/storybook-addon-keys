@@ -1,3 +1,15 @@
+# v1.1.4 (Sun May 28 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Redesign display ([@sebheron](https://github.com/sebheron))
+
+#### Authors: 1
+
+- Seb ([@sebheron](https://github.com/sebheron))
+
+---
+
 # v1.1.3 (Sun May 28 2023)
 
 #### ⚠️ Pushed to `main`
